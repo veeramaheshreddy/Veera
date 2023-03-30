@@ -1,0 +1,6 @@
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+
+COPY bin/release/net7.0/ App/
+WORKDIR /App
+
+ENTRYPOINT ["dotnet", "demoapi.dll"]

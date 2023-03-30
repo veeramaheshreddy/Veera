@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-web
+spec:
+  containers:
+  - name: dotnet-web
+    image: demo-image
+    imagePullPolicy: IfNotPresent
+    ports:
+    - name: web
+      containerPort: 80
